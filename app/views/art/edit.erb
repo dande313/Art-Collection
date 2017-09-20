@@ -1,0 +1,18 @@
+<div class="w3-bar w3-blue w3-card">
+	<a href="/art/index" class="w3-bar-item w3-button">Index</a>
+	<a href="/art/new" class="w3-bar-item w3-button w3-dark-grey" >New</a>
+	<a href="/art/submissions" class="w3-bar-item w3-button">Submissions</a>
+	<a href="/logout" class="w3-bar-item w3-button">Log Out</a>
+</div>
+<div class="form">
+	<h3>Edit</h3>
+	 <form action="/art/<%=@work.slug%>/edit" method="post">
+	 	<input type="text" name="title" placeholder="Title" value="<%=@work.title%>"><br>
+	 	<input type="text" name="artist" placeholder="Artist" value="<%=@work.artist%>"><br>
+	 	<input type="text" name="year" placeholder="Year" value="<%=@work.year%>"><br>
+	 	<input type="text" name="medium" placeholder="Medium" value="<%=@work.medium%>"><br>
+	 	<textarea rows="4" cols="50" name="description"><%=@work.description%></textarea><br>
+	 	<input type="submit" value="Update">
+	 </form>
+</div>
+
