@@ -54,6 +54,18 @@
 	   	<h1>CRUD Art Collection</h1>
 		<h4>Documenting Historical Art from Around the World!</h4>
    	</div>
+
+   	<div class="w3-bar w3-blue w3-card">
+   		<% if logged_in? %>
+			<a href="/art_work/index" class="w3-bar-item w3-button" >Index</a>
+			<a href="/art_work/new" class="w3-bar-item w3-button" >New</a>
+			<a href="/art_work/submissions" class="w3-bar-item w3-button">Submissions</a>
+			<a href="/logout" class="w3-bar-item w3-button">Log Out</a>
+		<% else %>
+			<a href="/signup" class="w3-bar-item w3-button">Sign Up</a>
+			<a href="/login" class="w3-bar-item w3-button">Log In</a>
+		<% end %>
+	</div>
 	<%= yield %>
    </body>
  </html> 

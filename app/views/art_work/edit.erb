@@ -1,0 +1,13 @@
+<div class="form">
+	<h3>Edit</h3>
+	 <form action="/art_work/<%=@work.slug%>" method="post">
+	 	<input type="hidden" name="_method" value="put">
+	 	<input type="text" name="title" placeholder="Title" value="<%=@work.title%>"><br>
+	 	<input type="text" name="artist" placeholder="Artist" value="<%=@work.artist%>"><br>
+	 	<input type="text" name="year" placeholder="Year" value="<%=@work.year%>"><br>
+	 	<input type="text" name="medium" placeholder="Medium" value="<%=@work.medium%>"><br>
+	 	<textarea rows="4" cols="50" name="description"><%=@work.description%></textarea><br>
+	 	<input type="submit" value="Update">
+	 </form>
+</div>
+

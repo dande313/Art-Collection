@@ -1,0 +1,13 @@
+<div class="content">
+	<br>
+	<% @works.each do |work| %>
+		<h3><a href="/art_work/<%=work.slug%>"><%= work.title %></a></h3>
+		<h5><%= work.medium%></h5>
+		<h4><%if work.artist.strip != ""%> created by <%= work.artist%> <%end%> <%if work.year != nil%> in <%= work.year%> <%end%></h4>
+		<div>----------------------------------------------------------------------------------</div>
+	<% end %>
+</div>
+
+
+
+
